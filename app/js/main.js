@@ -55,7 +55,7 @@ const createHeader = (city) => {
 
         try {
             const weather = await getWeatherData(searchInput.value)
-            console.log(weather)
+
 
             if(weather.message) {
                 showError(weather.message)
@@ -290,7 +290,7 @@ const app = async () => {
     const header = createHeader(weather.name)
     const content = createContent(weather)
     document.body.append(header, content)
-    console.log(weather)
+
 }
 
 app()
